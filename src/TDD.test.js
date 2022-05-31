@@ -8,3 +8,7 @@ describe("TDD", () => {
       expect(monto).toEqual(19);
     });
 });  
+
+function devolverMonto(monto){
+    return monto;
+}
