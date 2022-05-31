@@ -17,6 +17,11 @@ describe("TDD", () => {
         let cambio = devolverCambio2(19);
         expect(cambio).toEqual(17);
     });
+
+    it("Ingresar el monto y devolver resta con la moneda de 1", () => {
+        let cambio = devolverCambio1(19);
+        expect(cambio).toEqual(18);
+    });
 });  
 
 function devolverMonto(monto){
