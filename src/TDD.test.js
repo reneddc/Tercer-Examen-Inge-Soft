@@ -35,3 +35,7 @@ function devolverCambio5(monto){
 function devolverCambio2(monto){
     return monto - 2;
 }
+
+function devolverCambio1(monto){
+    return monto - 1;
+}
