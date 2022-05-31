@@ -31,12 +31,13 @@ describe("ATDD", () => {
     let efectivo = document.querySelector("#efectivo");
     let montoVenta = document.querySelector("#monto-venta");
 
+
     efectivo.value = 4;
     montoVenta.value = 5;
 
     botonCambio.click();
 
-    let resultado = parseInt(montoVenta.innerHTML) - parseInt(efectivo.innerHTML)
-    expect(cambioResultado.innerHTML).toEqual(resultado);
+    let resultado = parseInt(montoVenta.value) - parseInt(efectivo.value)
+    expect(parseInt(cambioResultado.innerHTML)).toEqual(resultado);
   });
 });  

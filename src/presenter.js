@@ -14,5 +14,6 @@ form.addEventListener("submit", (event) => {
   resultadoEfectivo.innerHTML =  efectivo.value;
 
   let cambio = montoVenta.value - efectivo.value;
+  console.log(cambio)
   resultadoCambio.innerHTML =  cambio;
 });
