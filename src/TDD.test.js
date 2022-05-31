@@ -34,3 +34,9 @@ function devolverMonto(monto){
 function devolverCambio(monto, moneda){
     return monto - moneda;
 }
+
+function devolverCambioDosMonedasDe5(monto){
+    let cambio = devolverCambio(monto, 5);
+    cambio = devolverCambio(cambio, 5);
+    return cambio;
+}
