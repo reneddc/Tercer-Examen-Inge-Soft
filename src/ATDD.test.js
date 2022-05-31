@@ -15,7 +15,7 @@ describe("ATDD", () => {
     expect(parseInt(montoVentaResultado.innerHTML)).toEqual(5);
   });
 
-  it("Monto Venta", () => {
+  it("Efectivo", () => {
     let botonCambio = document.querySelector("#boton-cambio");
     let efectivo = document.querySelector("#efectivo");
     let efectivoResultado = document.querySelector("#resultado-efectivo");
@@ -23,5 +23,20 @@ describe("ATDD", () => {
     efectivo.value = 4;
     botonCambio.click();
     expect(parseInt(efectivoResultado.innerHTML)).toEqual(4);
+  });
+
+  it("Cambio", () => {
+    let botonCambio = document.querySelector("#boton-cambio");
+    let cambio = document.querySelector("#cambio");
+    let cambioResultado = document.querySelector("#resultado-cambio");
+    let efectivo = document.querySelector("#efectivo");
+    let montoVenta = document.querySelector("#monto-venta");
+
+    efectivo.value = 4;
+    montoVenta.value = 5;
+
+    botonCambio.click();
+    let resultado = parseInt(montoVentaResultado.innerHTML) - parseInt(efectivoResultado.innerHTML)
+    expect(resultado).toEqual(1);
   });
 });  
