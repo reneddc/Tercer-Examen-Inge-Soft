@@ -14,4 +14,14 @@ describe("ATDD", () => {
     botonCambio.click();
     expect(parseInt(montoVentaResultado.innerHTML)).toEqual(5);
   });
+
+  it("Monto Venta", () => {
+    let botonCambio = document.querySelector("#boton-cambio");
+    let efectivo = document.querySelector("#efectivo");
+    let efectivoResultado = document.querySelector("#resultado-efectivo");
+
+    efectivo.value = 4;
+    botonCambio.click();
+    expect(parseInt(efectivoResultado.innerHTML)).toEqual(4);
+  });
 });  
