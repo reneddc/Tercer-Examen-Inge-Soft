@@ -21,9 +21,14 @@ describe("TDD", () => {
         expect(cambio).toEqual(18);
     });
 
-    it("Ingresar el monto y devolver resta con la moneda de 5 2 veces", () => {
+    it("Ingresar el monto y devolver resta con la moneda de 5, 2 veces", () => {
         let cambio = devolverCambioDosMonedasDe5(19);
         expect(cambio).toEqual(9);
+    });
+
+    it("Ingresar el monto y devolver resta con la moneda de 5 hasta que el cambio sea menor que la moneda", () => {
+        let cambio = devolverCambioDosMonedasDe5(19);
+        expect(cambio).toEqual(4);
     });
 });  
 
