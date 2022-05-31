@@ -27,7 +27,6 @@ describe("ATDD", () => {
 
   it("Cambio", () => {
     let botonCambio = document.querySelector("#boton-cambio");
-    let cambio = document.querySelector("#cambio");
     let cambioResultado = document.querySelector("#resultado-cambio");
     let efectivo = document.querySelector("#efectivo");
     let montoVenta = document.querySelector("#monto-venta");
@@ -36,7 +35,8 @@ describe("ATDD", () => {
     montoVenta.value = 5;
 
     botonCambio.click();
-    let resultado = parseInt(montoVentaResultado.innerHTML) - parseInt(efectivoResultado.innerHTML)
-    expect(resultado).toEqual(1);
+
+    let resultado = parseInt(montoVenta.innerHTML) - parseInt(efectivo.innerHTML)
+    expect(cambioResultado.innerHTML).toEqual(resultado);
   });
 });  
