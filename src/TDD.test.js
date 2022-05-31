@@ -22,8 +22,8 @@ describe("TDD", () => {
     });
 
     it("Ingresar el monto y devolver resta con la moneda de 5, 2 veces", () => {
-        let cambio = devolverCambioDosMonedasDe5(19);
-        expect(cambio).toEqual(9);
+        let cambio = devolverCambioDosMonedasDe5(11);
+        expect(cambio).toEqual(1);
     });
 
     it("Ingresar el monto y devolver resta con la moneda de 5 hasta que el cambio sea menor que la moneda", () => {
@@ -41,7 +41,9 @@ function devolverCambio(monto, moneda){
 }
 
 function devolverCambioDosMonedasDe5(monto){
-    let cambio = devolverCambio(monto, 5);
-    cambio = devolverCambio(cambio, 5);
+    let cambio = monto;
+    while(cambio > 5){
+        cambio = devolverCambio(cambio, 5);
+    }
     return cambio;
 }
